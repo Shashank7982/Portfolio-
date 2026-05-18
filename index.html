@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Srivastava| Software Engineer</title>
+    <meta name="description" content="Portfolio of Shashank Srivastava">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <div class="noise-overlay"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917982702240" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-grid container">
+                <div class="hero-content">
+                    <div class="hero-badge gs-reveal">AVAILABLE FOR WORK</div>
+                    <h1 class="hero-title gs-reveal">Shashank<br><span class="text-gradient">Srivastava</span></h1>
+                    <p class="hero-subtitle gs-reveal">I am a <strong id="typewriter" class="text-gradient"></strong><br>building seamless and impactful digital experiences.</p>
+                    <div class="hero-cta-wrapper gs-reveal">
+                        <a href="#work" class="btn btn-primary">
+                            Explore Work <i data-lucide="arrow-down"></i>
+                        </a>
+                        <a href="mailto:shashanks2493@gmail.com" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual gs-reveal">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-title">developer.js</span>
+                        </div>
+                        <div class="code-body">
+<pre><code><span class="keyword">const</span> <span class="variable">shashank</span> = {
+  <span class="property">role</span>: <span class="string">'Software Engineer'</span>,
+  <span class="property">focus</span>: [<span class="string">'Backend'</span>, <span class="string">'Frontend'</span>, <span class="string">'Data'</span>],
+  <span class="property">tech</span>: {
+    <span class="property">frontend</span>: [<span class="string">'React'</span>, <span class="string">'Tailwind'</span>],
+    <span class="property">backend</span>: [<span class="string">'Node'</span>, <span class="string">'Express'</span>, <span class="string">'MongoDB'</span>]
+  },
+  <span class="property">status</span>: <span class="string">'Available for opportunities'</span>
+};
+
+<span class="variable">shashank</span>.<span class="method">build</span>();</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container">
+                <h2 class="massive-quote gs-reveal-up">
+                    "Transforming complex problems into elegant, scalable web solutions. Always learning, building, and <span class="text-gradient">pushing boundaries</span>."
+                </h2>
+            </div>
+        </section>
+
+        <!-- Bento Grid Portfolio Section -->
+        <section id="work" class="works-section">
+            <div class="container">
+                <div class="section-header gs-reveal-up">
+                    <h2 class="section-title">Selected Works</h2>
+                    <p class="section-desc">A showcase of my recent full-stack applications and data visualization experiments.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Project 1 -->
+                    <div class="bento-card bento-large gs-reveal-up group" data-project="degreefyd" style="cursor: pointer;">
+                        <div class="bento-bg" style="background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.15), transparent 60%);"></div>
+                        <div class="bento-content">
+                            <div class="bento-meta">Full-Stack Application</div>
+                            <h3 class="bento-title">DegreeFYD</h3>
+                            <p class="bento-desc">A comprehensive college discovery platform featuring an advanced ROI and infrastructure comparison engine. Built with React.js, Tailwind, Node.js, Express, and MongoDB.</p>
+                            <div class="bento-tags">
+                                <span>React</span><span>Node.js</span><span>MongoDB</span>
+                            </div>
+                            <div class="bento-links">
+                                <a href="https://dffrontend.vercel.app/" target="_blank" class="bento-btn"><i data-lucide="external-link"></i> Live Site</a>
+                                <a href="https://github.com/Shashank7982/DegreeFYD" target="_blank" class="bento-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bento-card gs-reveal-up group" data-project="hireverse" style="cursor: pointer;">
+                        <div class="bento-bg" style="background: radial-gradient(circle at top right, rgba(0, 150, 255, 0.15), transparent 60%);"></div>
+                        <div class="bento-content">
+                            <div class="bento-meta">Job Portal</div>
+                            <h3 class="bento-title">HireVerse</h3>
+                            <p class="bento-desc">Robust full-stack platform with secure RBAC authentication, resume parsing, and applicant tracking systems.</p>
+                            <div class="bento-links">
+                                <a href="https://github.com/Shashank7982/HireVerse" target="_blank" class="bento-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                    Source
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bento-card gs-reveal-up group" data-project="staysphere" style="cursor: pointer;">
+                        <div class="bento-bg" style="background: radial-gradient(circle at top right, rgba(255, 50, 100, 0.15), transparent 60%);"></div>
+                        <div class="bento-content">
+                            <div class="bento-meta">Booking System</div>
+                            <h3 class="bento-title">StaySphere</h3>
+                            <p class="bento-desc">Server-rendered rental booking architecture optimized for performance and seamless UX.</p>
+                            <div class="bento-links">
+                                <a href="https://github.com/Shashank7982/StaySphere---FullStacks" target="_blank" class="bento-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                    Source
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bento-card bento-large gs-reveal-up group" data-project="spotify" style="cursor: pointer;">
+                        <div class="bento-bg" style="background: radial-gradient(circle at bottom left, rgba(29, 185, 84, 0.15), transparent 60%);"></div>
+                        <div class="bento-content">
+                            <div class="bento-meta">Data Visualization</div>
+                            <h3 class="bento-title">Spotify Trends Analysis</h3>
+                            <p class="bento-desc">Complex data analytics project leveraging Tableau to dissect the Ultimate Spotify Tracks dataset. Explored deep relationships across 176k songs involving energy, tempo, and valence.</p>
+                            <div class="bento-tags">
+                                <span>Tableau</span><span>Data Analytics</span>
+                            </div>
+                            <div class="bento-links">
+                                <a href="https://github.com/Shashank7982/Spotify-Trends-Analysis-" target="_blank" class="bento-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                    View Research
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="info-section">
+            <div class="container">
+                <div class="section-header gs-reveal-up">
+                    <h2 class="section-title">Experience & Education</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Work Experience -->
+                    <div class="timeline-item gs-reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">06/2025 – 08/2025</div>
+                        <div class="timeline-content bento-card">
+                            <h3 class="timeline-title">Software Developer Intern</h3>
+                            <h4 class="timeline-subtitle">Joblient Technologies (Remote)</h4>
+                            <ul class="timeline-list">
+                                <li>Contributed to the development of key sections of the website using the MERN stack (MongoDB, Express.js, Node.js).</li>
+                                <li>Designed modern, responsive UI components in Figma and implemented them in React.js with clean, modular code.</li>
+                                <li>Built efficient RESTful APIs to ensure seamless backend operations and smooth data flow.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Education 1 -->
+                    <div class="timeline-item gs-reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 – Present</div>
+                        <div class="timeline-content bento-card">
+                            <h3 class="timeline-title">B.Tech, Computer Science</h3>
+                            <h4 class="timeline-subtitle">The NorthCap University, Gurugram</h4>
+                            <p class="timeline-text">Cumulative GPA: 8.3/10</p>
+                        </div>
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="timeline-item gs-reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content bento-card">
+                            <h3 class="timeline-title">Class XII (CBSE)</h3>
+                            <h4 class="timeline-subtitle">Pragati Public School, New Delhi</h4>
+                            <p class="timeline-text">Percentage: ~92%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications Section -->
+        <section id="skills" class="info-section">
+            <div class="container">
+                <div class="bento-grid">
+                    <!-- Skills -->
+                    <div class="bento-card bento-large gs-reveal-up">
+                        <h3 class="bento-title mb-4">Technical Skills</h3>
+                        <div class="skills-wrapper">
+                            <div class="skill-category">
+                                <h4>Core Technologies</h4>
+                                <div class="bento-tags large-tags">
+                                    <span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category mt-4">
+                                <h4>Frameworks & Tools</h4>
+                                <div class="bento-tags large-tags">
+                                    <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>EJS</span><span>REST APIs</span><span>Tableau</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="bento-card gs-reveal-up">
+                        <h3 class="bento-title mb-4">Certifications</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <strong>Azure AI Fundamentals (AI-900)</strong>
+                                <span>Microsoft (Score: 863/1000)</span>
+                            </li>
+                            <li>
+                                <strong>Data Analytics with Python</strong>
+                                <span>NPTEL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Footer Section -->
+        <section id="about" class="footer-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-info gs-reveal-up">
+                        <h2 class="footer-title">Let's build the <br><span class="text-gradient">future</span> together.</h2>
+                        <p class="footer-bio">I am a collaborative team player, eager for new tech and better practices. If you're looking for an engineer who brings passion and results, I am ready to work.</p>
+                        <a href="mailto:shashanks2493@gmail.com" class="email-link">shashanks2493@gmail.com</a>
+                    </div>
+                    <div class="footer-social gs-reveal-up">
+                        <div class="social-list">
+                            <a href="https://github.com/Shashank7982" target="_blank" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                GitHub
+                            </a>
+                            <a href="#" target="_blank" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://instagram.com/shashankshrivx" target="_blank" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                Instagram
+                            </a>
+                            <a href="https://wa.me/917982702240" target="_blank" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="year"></span> Shashank Srivastava. All rights reserved.</p>
+                    <p>Designed for excellence.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Modal Overlay -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-scroll-area">
+            <button class="close-modal" id="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                Close Project
+            </button>
+            <div id="modal-body" class="modal-body">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
